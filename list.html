@@ -2,19 +2,21 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="styles/styles.css"></style>
-	<script src="build/react.js"></script>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<script src="build/react-with-addons.js"></script>
 	<script src="build/JSXTransformer.js"></script>
 </head>
 <body>
 	<div id="example"></div>
 	<script type="text/jsx">
 		window.React = React;
+		var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
 
 		var FilteredList = React.createClass({
 			filterList: function(event){
 				var updatedList = this.state.initialItems;
 				updatedList = updatedList.filter(function(item){
-					return item.toLowerCase().search(
+					return item.desc.toLowerCase().search(
 						event.target.value.toLowerCase()) !== -1;
 				});
 				this.setState({items: updatedList});
@@ -22,14 +24,14 @@
 			getInitialState: function(){
 				return {
 					initialItems: [
-					"Apples",
-					"Broccoli",
-					"Chicken",
-					"Duck",
-					"Eggs",
-					"Fish",
-					"Granola",
-					"Hash Browns"
+					{ key:1, desc:"Apples", url:"" },
+					{ key:2, desc:"Broccoli", url:"" },
+					{ key:3, desc:"Chicken", url:"" },
+					{ key:4, desc:"Duck", url:"" },
+					{ key:5, desc:"Eggs", url:"" },
+					{ key:6, desc:"Fish", url:"" },
+					{ key:7, desc:"Granola", url:"" },
+					{ key:8, desc:"Hash Browns", url:"" }
 					],
 					items: []
 				}
@@ -40,8 +42,8 @@
 			render: function(){
 				return (
 					<div className="filter-list">
-						<input type="text" placeholder="Search" onChange={this.filterList}/>
-						<List items={this.state.items}/>
+						<input type="text" placeholder="Search" onChange={this.filterList}/>						
+							<List items={this.state.items} key={this.state}/>
 					</div>
 					);
 			}
@@ -51,17 +53,22 @@
 			render: function(){
 				return (
 					<ul>
+						<ReactCSSTransitionGroup transitionName="example">
 						{
 							this.props.items.map(function(item) {
-								return <li key={item}>{item}</li>
+								return <li key={item.key}>
+									{item.desc}
+									<i className="fa fa-envelope-o"></i>
+									</li>
 							})
 						}
+						</ReactCSSTransitionGroup>
 					</ul>
 					)  
 			}
 		});
 
-		React.renderComponent(<FilteredList/>, document.getElementById('example'));
+		React.render(<FilteredList/>, document.getElementById('example'));
 	</script>
 </body>
 </html>
