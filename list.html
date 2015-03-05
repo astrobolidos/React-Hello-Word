@@ -24,14 +24,12 @@
 			getInitialState: function(){
 				return {
 					initialItems: [
-					{ key:1, desc:"Apples", url:"" },
-					{ key:2, desc:"Broccoli", url:"" },
-					{ key:3, desc:"Chicken", url:"" },
-					{ key:4, desc:"Duck", url:"" },
-					{ key:5, desc:"Eggs", url:"" },
-					{ key:6, desc:"Fish", url:"" },
-					{ key:7, desc:"Granola", url:"" },
-					{ key:8, desc:"Hash Browns", url:"" }
+					{ key:1, desc:"Daddy Pig", url:"daddypig.png" },
+					{ key:2, desc:"Mommy Pig", url:"mommypig.png" },
+					{ key:3, desc:"Peppa Pig", url:"peppa.png" },
+					{ key:4, desc:"George Pig", url:"george.png" },
+					{ key:5, desc:"Mr Fox", url:"mrfox.png" },
+					{ key:6, desc:"Miss Rabbit", url:"missrabbit.png" }
 					],
 					items: []
 				}
@@ -57,6 +55,7 @@
 						{
 							this.props.items.map(function(item) {
 								return <li key={item.key}>
+									<img src={"images/" + item.url}/>
 									{item.desc}
 									<i className="fa fa-envelope-o"></i>
 									</li>
