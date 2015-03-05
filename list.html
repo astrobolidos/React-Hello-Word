@@ -54,8 +54,11 @@
 						<ReactCSSTransitionGroup transitionName="example">
 						{
 							this.props.items.map(function(item) {
+								var divStyle = { backgroundImage: 'url(images/' + item.url + ')',}
+
 								return <li key={item.key}>
-									<img src={"images/" + item.url}/>
+									<div style={divStyle} className="circular">
+									</div>
 									{item.desc}
 									<i className="fa fa-envelope-o"></i>
 									</li>
