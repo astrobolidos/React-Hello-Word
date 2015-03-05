@@ -7,10 +7,20 @@
   <body>
     <div id="example"></div>
     <script type="text/jsx">
-      React.render(
-        <h1>Hello, world!</h1>,
-        document.getElementById('example')
-      );
+    	var MyPanel = React.createClass({
+    		render: function() {
+    			return (
+    				<h1>Hello, {this.props.name}!</h1>	
+    				);
+
+    		}
+    	});
+
+
+    	React.render(
+    		<MyPanel name="Lisandro"/>,
+    		document.getElementById('example')
+    		);
     </script>
   </body>
 </html>
