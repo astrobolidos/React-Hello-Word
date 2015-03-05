@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" type="text/css" href="styles/styles.css"></style>
 	<script src="build/react.js"></script>
 	<script src="build/JSXTransformer.js"></script>
 </head>
 <body>
 	<div id="example"></div>
 	<script type="text/jsx">
+		window.React = React;
+
 		var MyPanel = React.createClass({
 			getInitialState: function() {
 				return { count: 0 };
@@ -16,7 +19,8 @@
 			},
 			render: function() {
 				return (
-					<div><h1>Hello, {this.props.name}!</h1>
+					<div className="filter-list">
+					   <h1>Hello, {this.props.name}!</h1>
 						<p>your count is {this.state.count}.</p>
 						<button type="button" onClick={this.incrementCount}>Plus One!</button>
 					</div>	
