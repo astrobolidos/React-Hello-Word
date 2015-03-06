@@ -7,6 +7,7 @@ Desktop.ini
 
 # Node Modules 
 node_modules/
+index.sublime-workspace
 
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
