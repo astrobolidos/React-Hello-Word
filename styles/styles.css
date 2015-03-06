@@ -68,4 +68,13 @@ body {
 	box-shadow: 0 0 8px rgba(0, 0, 0, .3);
 	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .3);
 	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .3);
+	display: inline-block;
+	}
+	.commandIcon {
+		float: right;
+	}
+	.userName {
+		font-size: 20px;
+		padding: 20px 0px 0px 10px;
+		vertical-align: top;
 	}

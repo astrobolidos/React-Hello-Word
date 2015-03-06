@@ -57,10 +57,9 @@
 								var divStyle = { backgroundImage: 'url(images/' + item.url + ')',}
 
 								return <li key={item.key}>
-									<div style={divStyle} className="circular">
-									</div>
-									{item.desc}
-									<i className="fa fa-envelope-o"></i>
+									<div style={divStyle} className="circular"></div>
+									<span className="userName">{item.desc}</span>
+									<i className="commandIcon fa fa-envelope-o"></i>
 									</li>
 							})
 						}
