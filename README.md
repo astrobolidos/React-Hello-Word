@@ -1,9 +1,5 @@
-Open Index.html on browser to see it running!
-
-or
-
-If you want to change the project, run: 
+Run
    npm install
    npm start
 
-   Open Index.html 
+   Open Index.html on browser to see it running!
