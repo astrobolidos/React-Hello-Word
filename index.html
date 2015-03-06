@@ -2,37 +2,10 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="styles/styles.css"></style>
-	<script src="build/react.js"></script>
-	<script src="build/JSXTransformer.js"></script>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
 <body>
 	<div id="example"></div>
-	<script type="text/jsx">
-		window.React = React;
-
-		var MyPanel = React.createClass({
-			getInitialState: function() {
-				return { count: 0 };
-			},    		
-			incrementCount: function() {
-				this.setState({ count: this.state.count + 1 });
-			},
-			render: function() {
-				return (
-					<div className="filter-list">
-					   <h1>Hello, {this.props.name}!</h1>
-						<p>your count is {this.state.count}.</p>
-						<button type="button" onClick={this.incrementCount}>Plus One!</button>
-					</div>	
-					);
-			}
-		});
-
-
-		React.render(
-			<MyPanel name="Lisandro"/>,
-			document.getElementById('example')
-			);
-	</script>
+	<script src="js/bundle.js"></script>
 </body>
 </html>
