@@ -33,7 +33,7 @@
     ]
   },
   "jest": {
-    "testDirectoryName": "__tests__/src/",
+    "testDirectoryName": "__tests__/src",
     "scriptPreprocessor": "__tests__/preprocessor.js",
     "unmockedModulePathPatterns": ["node_modules/react"]    
   }
