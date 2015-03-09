@@ -1,4 +1,4 @@
-var filteredListPath = '../../js/components/filteredList.react.js';
+var filteredListPath = '../../../js/components/filteredList.react.js';
 jest.dontMock(filteredListPath);
 
 describe('FilteredList', function(){
@@ -12,7 +12,7 @@ describe('FilteredList', function(){
 
     	// get number of li's
     	// var li = TestUtils.findRenderedDomComponentWithTag(filteredList, 'li');
-
+        
 		expect(6).toEqual(6);
 	});
 });

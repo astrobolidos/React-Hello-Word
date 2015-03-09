@@ -1,5 +1,5 @@
 // __tests__/sum-test.js
-var path = '../../js/components/sum'
+var path = '../../../js/components/sum'
 jest.dontMock(path);
 
 describe('sum', function() {

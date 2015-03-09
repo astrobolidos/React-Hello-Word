@@ -9,5 +9,7 @@ Run
 
    Open Index.html on browser to see it running!
 
-Run 
+Debug:
 	npm test for unit testing
+    I'm using node-inspector: there's a caveat at the moment:
+       http://stackoverflow.com/questions/25142173/debugging-jest-test-cases-using-node-inspector
