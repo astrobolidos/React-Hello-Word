@@ -8,9 +8,9 @@ describe('FilteredList', function(){
     	// var TestUtils = React.addons.TestUtils;
 
     	// renders the filtered list
-    	//var filteredList = TestUtils.renderIntoDocument(<FilteredList />);
+    	// var filteredList = TestUtils.renderIntoDocument(<FilteredList />);
 
-    	// get number of li's
+    	// //get number of li's
     	// var li = TestUtils.findRenderedDomComponentWithTag(filteredList, 'li');
 
 		expect(6).toEqual(6);
