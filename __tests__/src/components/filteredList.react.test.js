@@ -12,7 +12,7 @@ describe('FilteredList', function(){
 
     	// get number of li's
     	// var li = TestUtils.findRenderedDomComponentWithTag(filteredList, 'li');
-        //debugger;
+
 		expect(6).toEqual(6);
 	});
 });

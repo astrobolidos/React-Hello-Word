@@ -7,7 +7,7 @@
     "start": "watchify -o js/bundle.js -v -d .",
     "build": "browserify . | uglifyjs -cm > js/bundle.min.js",
     "test": "jest",
-    "test-debug": "node-debug --nodejs --harmony ./node_modules/jest-cli/bin/jest.js --runInBand"
+    "test-debug": "node-debug --nodejs --harmony node_modules/jest-cli/bin/jest --runInBand"
   },
   "repository": {
     "type": "git",
@@ -35,6 +35,6 @@
   "jest": {
     "testDirectoryName": "__tests__/src",
     "scriptPreprocessor": "__tests__/preprocessor.js",
-    "unmockedModulePathPatterns": ["node_modules/react"]    
+    "unmockedModulePathPatterns": ["node_modules/react"] 
   }
 }
